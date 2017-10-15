@@ -1,0 +1,6 @@
+framework module Pods_TabbingTest {
+  umbrella header "Pods-TabbingTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
