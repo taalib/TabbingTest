@@ -17,6 +17,7 @@ var timerStarted = true
 // Firebase database reference
 var ref:DatabaseReference?
 var databaseHandle:DatabaseHandle?
+var birdData = [String]()
 
 //MARK: Circular animation based global variables and properties
 let screenSize = UIScreen.main.bounds
@@ -30,15 +31,18 @@ class SecondViewController: UIViewController {
     //MARK: SETTING MY TIMER VARIABLES
     
     var timer = Timer()
-    
     var seconds = 1500
-    
     var dailyTotal = 0
-    
     let userDefaults = UserDefaults.standard
     
     // Create a new CircleView
     let circleView = Circle(frame: CGRect(x: ((screenWidth/2) - (circleWidth/2)), y: ((screenHeight/2) - (circleHeight/2)), width: circleWidth, height: circleHeight))
+    
+    //MARK: Firebase variables
+   
+    var ref:DatabaseReference?
+    var databaseHandle:DatabaseHandle?
+//    var birdData = [String]()
     
     //MARK: TIMER OUTLETS
     
@@ -57,7 +61,34 @@ class SecondViewController: UIViewController {
         } else {
             timer.invalidate()
         }
-        if seconds == 0 {
+        if seconds == 1495 {
+            
+            // Fact modal
+            
+            performSegue(withIdentifier: "fact", sender: nil)
+            
+            // Firebase retrieval
+            
+            print ("retrieve")
+            
+            // Set the firebase reference
+            ref = Database.database().reference()
+            
+            databaseHandle = ref?.child("birdFacts\(total)").observe(.value, with: { (snapshot) in
+                
+                let post = snapshot.value as? String
+                
+                if let actualPost = post {
+                    
+                      birdData.append(actualPost)
+//                    self.myTableView.reloadData()
+//                    self.currentFact.append(actualPost)
+                    
+                }
+                
+            })
+            
+            // Timer and total update
             total += 1
             dailyTotal += 1
             timer.invalidate()
@@ -106,7 +137,6 @@ class SecondViewController: UIViewController {
         } else {
             return false
         }
-        
     }
     
     func resume() {
@@ -117,20 +147,17 @@ class SecondViewController: UIViewController {
         let timeSincePause: CFTimeInterval = circleLayer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
         circleLayer.beginTime = timeSincePause
         print (pausedTime)
-        
     }
     
     func reset() {
         circleLayer.removeAllAnimations()
         circleLayer.transform = CATransform3DIdentity
         circleView.resetCircle(duration: 1.0)
-        
     }
     
     //MARK: Bring in animal fact
     
     func animalFact() {
-        
         
     }
     
@@ -139,6 +166,7 @@ class SecondViewController: UIViewController {
     @IBAction func Play(_ sender: Any) {
        
         if timerStarted == true {
+            print (birdData)
             startAnimateCircle()
             print ("timer started")
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(SecondViewController.decreaseTimer), userInfo: nil, repeats: true)
@@ -169,12 +197,14 @@ class SecondViewController: UIViewController {
         dailyTotal = 0
         UserDefaults.standard.set(dailyTotal, forKey: "dailyTotal")
         UIView.animate(withDuration: 0.3, animations: {
+            
             self.magpie3.transform = CGAffineTransform(translationX: 350, y: 500)
             
         })
     }
     
     @IBAction func restart(_ sender: Any) {
+        
         reset()
         timer.invalidate()
         print ("timer reset")
@@ -182,11 +212,13 @@ class SecondViewController: UIViewController {
         timerLabel.text = timeString(time: TimeInterval(seconds))
         timerStarted = true
         startStop.setImage(#imageLiteral(resourceName: "Play"), for: .normal)
+        
     }
     
     //MARK: TIME FORMAT SETTINGS
 
     func timeString (time:TimeInterval) -> String {
+        
         //let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
@@ -199,12 +231,10 @@ class SecondViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if let x = UserDefaults.standard.object(forKey: "myTotal") as? Int {
-            
             total = x
         }
         
         if let y = UserDefaults.standard.object(forKey: "dailyTotal") as? Int {
-            
             dailyTotal = y
         }
         
@@ -226,7 +256,6 @@ class SecondViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     
@@ -259,7 +288,6 @@ class SecondViewController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         timeout()
         
-        
     }
     
 
@@ -269,6 +297,4 @@ class SecondViewController: UIViewController {
         // INITIATE NOTIFICATION SETUP FUNC
         initNotificationSetupCheck()
     }
-
 }
-

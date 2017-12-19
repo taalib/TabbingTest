@@ -16,12 +16,13 @@
 		144C38E21F7D7F91006073F9 /* TabbingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C38E11F7D7F91006073F9 /* TabbingTestTests.swift */; };
 		144C38ED1F7D7F91006073F9 /* TabbingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C38EC1F7D7F91006073F9 /* TabbingTestUITests.swift */; };
 		144C39251F7D8866006073F9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C39241F7D8866006073F9 /* TabBarController.swift */; };
-		144C39271F7D8BBF006073F9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C39261F7D8BBF006073F9 /* ThirdViewController.swift */; };
 		144C39291F8000E0006073F9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C39281F8000E0006073F9 /* TableViewController.swift */; };
 		144C392B1F80011E006073F9 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C392A1F80011E006073F9 /* ToDo.swift */; };
 		144C392F1F80015E006073F9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C392E1F80015E006073F9 /* TableViewCell.swift */; };
 		14B2166E1F8695C8001C697D /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B2166D1F8695C8001C697D /* Circle.swift */; };
 		14B216B31F93A529001C697D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14B216B21F93A523001C697D /* GoogleService-Info.plist */; };
+		14D9213D1F9CD2900019B5BF /* FactModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D9213C1F9CD2900019B5BF /* FactModal.swift */; };
+		14D9213F1F9CD2ED0019B5BF /* ModalDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D9213E1F9CD2ED0019B5BF /* ModalDesign.swift */; };
 		BB2B162E63E20883EA8BF124 /* Pods_TabbingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA59D96459F0F4900B82E53 /* Pods_TabbingTestTests.framework */; };
 		E498E65891C03F24E788315A /* Pods_TabbingTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D5C0F73F883EAA60E380E4 /* Pods_TabbingTest.framework */; };
 		F76870AFDC249EC307337208 /* Pods_TabbingTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCF2511428C512F4327E985 /* Pods_TabbingTestUITests.framework */; };
@@ -61,12 +62,13 @@
 		144C38EC1F7D7F91006073F9 /* TabbingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbingTestUITests.swift; sourceTree = "<group>"; };
 		144C38EE1F7D7F91006073F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		144C39241F7D8866006073F9 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		144C39261F7D8BBF006073F9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		144C39281F8000E0006073F9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		144C392A1F80011E006073F9 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		144C392E1F80015E006073F9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		14B2166D1F8695C8001C697D /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		14B216B21F93A523001C697D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		14D9213C1F9CD2900019B5BF /* FactModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModal.swift; sourceTree = "<group>"; };
+		14D9213E1F9CD2ED0019B5BF /* ModalDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDesign.swift; sourceTree = "<group>"; };
 		2261B321DC853CA63C904CEE /* Pods-TabbingTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbingTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbingTestUITests/Pods-TabbingTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F7E2E613AC2D03D14F75383 /* Pods-TabbingTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbingTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabbingTestUITests/Pods-TabbingTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		383CCBF1CD60B6CB3B3E6060 /* Pods-TabbingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbingTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbingTestTests/Pods-TabbingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				144C38CE1F7D7F90006073F9 /* SecondViewController.swift */,
+				14D9213C1F9CD2900019B5BF /* FactModal.swift */,
+				14D9213E1F9CD2ED0019B5BF /* ModalDesign.swift */,
 				14B2166D1F8695C8001C697D /* Circle.swift */,
 			);
 			name = Timer;
@@ -201,7 +205,6 @@
 		144C39341F801339006073F9 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				144C39261F7D8BBF006073F9 /* ThirdViewController.swift */,
 			);
 			name = Stats;
 			sourceTree = "<group>";
@@ -518,12 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				144C38CF1F7D7F90006073F9 /* SecondViewController.swift in Sources */,
+				14D9213D1F9CD2900019B5BF /* FactModal.swift in Sources */,
+				14D9213F1F9CD2ED0019B5BF /* ModalDesign.swift in Sources */,
 				144C392F1F80015E006073F9 /* TableViewCell.swift in Sources */,
 				14B2166E1F8695C8001C697D /* Circle.swift in Sources */,
 				144C392B1F80011E006073F9 /* ToDo.swift in Sources */,
 				144C39291F8000E0006073F9 /* TableViewController.swift in Sources */,
 				144C39251F7D8866006073F9 /* TabBarController.swift in Sources */,
-				144C39271F7D8BBF006073F9 /* ThirdViewController.swift in Sources */,
 				144C38CB1F7D7F90006073F9 /* AppDelegate.swift in Sources */,
 				144C38CD1F7D7F90006073F9 /* FirstViewController.swift in Sources */,
 			);
